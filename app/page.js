@@ -7,44 +7,14 @@ import Image from "next/image";
 export default function Page() {
   const [open, setOpen] = useState(false);
 
-  // TEAM IMAGES 1.jpg, 2.jpg, 3.jpg…
-   const team = [
-    {
-      img: "/1.jpg",
-      name: "Paskal Navi",
-      role: "CPO",
-      x: "https://x.com/paskal_navi",
-    },
-    {
-      img: "/2.jpg",
-      name: "Raffaxeal",
-      role: "Ambassador & Moderator",
-      x: "https://x.com/Raffaxeal",
-    },
-    {
-      img: "/3.jpg",
-      name: "Kaisar",
-      role: "Moderator",
-      x: "https://x.com/kaisar1310",
-    },
-    {
-      img: "/4.jpg",
-      name: "Doan Long Hau",
-      role: "Ambassador & Moderator",
-      x: "https://x.com/doanlonghau",
-    },
-    {
-      img: "/5.jpg",
-      name: "Edward EVM",
-      role: "Ambassador",
-      x: "https://x.com/edward_evm",
-    },
-    {
-      img: "/6.jpg",
-      name: "Abhi Web3",
-      role: "Ambassador & Moderator",
-      x: "https://x.com/Abhi__web3",
-    },
+  // TEAM IMAGES
+  const team = [
+    { img: "/1.jpg", name: "Paskal Navi", role: "CPO", x: "https://x.com/paskal_navi" },
+    { img: "/2.jpg", name: "Raffaxeal", role: "Ambassador & Moderator", x: "https://x.com/Raffaxeal" },
+    { img: "/3.jpg", name: "Kaisar", role: "Moderator", x: "https://x.com/kaisar1310" },
+    { img: "/4.jpg", name: "Doan Long Hau", role: "Ambassador & Moderator", x: "https://x.com/doanlonghau" },
+    { img: "/5.jpg", name: "Edward EVM", role: "Ambassador", x: "https://x.com/edward_evm" },
+    { img: "/6.jpg", name: "Abhi Web3", role: "Ambassador & Moderator", x: "https://x.com/Abhi__web3" },
   ];
 
   return (
@@ -53,8 +23,20 @@ export default function Page() {
       {/* NAVBAR */}
       <nav className="w-full border-b bg-white/80 backdrop-blur sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-extrabold tracking-tight">ALTIUS</h1>
 
+          {/* LOGO + BRAND NAME */}
+          <div className="flex items-center gap-3">
+            <Image
+              src="/0.jpg"
+              width={40}
+              height={40}
+              alt="Altius Logo"
+              className="rounded-md md:w-12 md:h-12"
+            />
+            <span className="text-xl font-extrabold tracking-tight">ALTIUS</span>
+          </div>
+
+          {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 text-sm font-medium">
             <a href="#about" className="hover:text-blue-600">About</a>
             <a href="#hub" className="hover:text-blue-600">Hub</a>
@@ -62,6 +44,7 @@ export default function Page() {
             <a href="#careers" className="hover:text-blue-600">Careers</a>
           </div>
 
+          {/* Mobile toggle */}
           <button className="md:hidden" onClick={() => setOpen(!open)}>
             <div className="space-y-1">
               <span className="block w-6 h-[2px] bg-gray-900"></span>
@@ -105,11 +88,7 @@ export default function Page() {
         </motion.p>
 
         <div className="mt-10 flex justify-center gap-4 flex-wrap">
-          {/* UPDATED BUTTON → Follow on X */}
-          <Button 
-            link="https://x.com/intent/user?screen_name=altiuslabs"
-            text="Follow on X"
-          />
+          <Button link="https://x.com/intent/user?screen_name=altiuslabs" text="Follow on X" />
           <Button link="https://discord.gg/g6GtzRC8" text="Join Discord" light />
           <Button link="https://t.me/altiuslabs" text="Telegram" light />
         </div>
@@ -120,9 +99,7 @@ export default function Page() {
         <h2 className="text-3xl font-bold">About Us</h2>
         <p className="mt-4 text-gray-600 leading-relaxed">
           Altius delivers high-performance execution for blockchains without rewrites,
-          migrations, or complex upgrades. We enable parallel execution, 
-          memory-first sharding, VM-agnostic performance, and stable throughput 
-          for any L1, L2, or app-chain.
+          migrations, or complex upgrades.
         </p>
       </section>
 
@@ -174,25 +151,18 @@ export default function Page() {
         </a>
       </section>
 
-      {/* FOOTER — UPDATED WITH ASHUPASAYA */}
+      {/* FOOTER */}
       <footer className="px-6 py-8 border-t text-center text-gray-600 text-sm">
         <div className="flex flex-col items-center gap-2">
           <div>Altius © 2025 • High-Performance Blockchain Execution</div>
-
           <div>
             Created by{" "}
-            <a 
-              href="https://x.com/AshuPasaya"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 font-semibold hover:underline"
-            >
+            <a href="https://x.com/AshuPasaya" target="_blank" className="text-blue-600 font-semibold hover:underline">
               AshuPasaya
             </a>
           </div>
         </div>
       </footer>
-
     </div>
   );
 }
