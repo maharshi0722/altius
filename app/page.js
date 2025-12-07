@@ -8,13 +8,43 @@ export default function Page() {
   const [open, setOpen] = useState(false);
 
   // TEAM IMAGES 1.jpg, 2.jpg, 3.jpg…
-  const team = [
-    { img: "/1.jpg", name: "Paskal Navi", role: "Core Team", x: "https://x.com/paskal_navi" },
-    { img: "/2.jpg", name: "Raffaxeal", role: "Core Team", x: "https://x.com/Raffaxeal" },
-    { img: "/3.jpg", name: "Kaisar", role: "Engineering", x: "https://x.com/kaisar1310" },
-    { img: "/4.jpg", name: "Doan Long Hau", role: "Core Dev", x: "https://x.com/doanlonghau" },
-    { img: "/5.jpg", name: "Edward EVM", role: "Developer Relations", x: "https://x.com/edward_evm" },
-    { img: "/6.jpg", name: "Abhi Web3", role: "Growth & Community", x: "https://x.com/Abhi__web3" },
+   const team = [
+    {
+      img: "/1.jpg",
+      name: "Paskal Navi",
+      role: "CPO",
+      x: "https://x.com/paskal_navi",
+    },
+    {
+      img: "/2.jpg",
+      name: "Raffaxeal",
+      role: "Ambassador & Moderator",
+      x: "https://x.com/Raffaxeal",
+    },
+    {
+      img: "/3.jpg",
+      name: "Kaisar",
+      role: "Moderator",
+      x: "https://x.com/kaisar1310",
+    },
+    {
+      img: "/4.jpg",
+      name: "Doan Long Hau",
+      role: "Ambassador & Moderator",
+      x: "https://x.com/doanlonghau",
+    },
+    {
+      img: "/5.jpg",
+      name: "Edward EVM",
+      role: "Ambassador",
+      x: "https://x.com/edward_evm",
+    },
+    {
+      img: "/6.jpg",
+      name: "Abhi Web3",
+      role: "Ambassador & Moderator",
+      x: "https://x.com/Abhi__web3",
+    },
   ];
 
   return (
